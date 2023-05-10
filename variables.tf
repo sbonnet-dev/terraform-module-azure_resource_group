@@ -54,3 +54,8 @@ variable "location" {
     error_message = "location invalid. Valid value for location are (francecentral,westeurope,northeurope)"
   }
 }
+
+variable "owner" {
+  type        = string
+  description = "Owner"
+}
