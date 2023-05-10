@@ -1,4 +1,10 @@
 resource "azurerm_resource_group" "resource_group" {
-  name     = lower(format("%s-%s-%s", var.rg_type, var.environment, var.name))
+  name     = lower(format("rg-%s-%s-%s", var.project, var.environment, var.name))
   location = var.location
+
+  tags = {
+    env       = var.environment
+    project   = var.project
+    owner     = var.owner
+  }
 }

@@ -3,6 +3,12 @@ variable "name" {
   description = "Resource group name"
 }
 
+variable "project" {
+  type        = string
+  description = "Resource group name"
+  default     = "OSCAR"
+}
+
 variable "rg_type" {
   type        = string
   description = "Specify the prefix name of the resource group"
